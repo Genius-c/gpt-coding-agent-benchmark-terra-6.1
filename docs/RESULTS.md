@@ -14,6 +14,10 @@ Submitted suites were executed as supplied and all exited successfully. Their di
 
 The machine-readable observations in `results/reproduction.json` and six log files provide the recorded evidence. Log timings reflect this one run and are not model generation latency. The initial restricted attempt encountered environment access failures; it was replaced by a completed run with loopback and temporary-file access. No runtime source fixes were made to the model submissions.
 
+## Supplemental queue edge-case checks
+
+The recovered Korean common task has been translated into English in `TASK_PROMPT.md`. A separate set of probes in `probes/edge_cases.py` and `probes/crash_recovery.py` covers FIFO after retry, cancelled-before-first-execution attempt accounting, and forced-exit restart behavior. The original probe implementations were rerun against the same archive in a Linux/Python 3.13.5 environment and yielded: Terra 3/3, Luna 2/3 (FIFO inversion), Sol 1/3 (attempt and restart failures). These counts are scenario checks, not a general accuracy score; see [EDGE_CASES.md](EDGE_CASES.md) for details and caveats.
+
 ## Original generation sessions, reported separately
 
 The later supplied extracts report Terra 96 seconds / 7 actions, Luna 288 seconds / 21 actions, and Sol 368 seconds / 26 actions, each at Medium reasoning in the contributor-built Orbit IDE. Final agent claims were 9, 10 and 10 tests passing respectively. These are reported session summaries; the table above is the later measured reproduction of the ZIP artifacts.
