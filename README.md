@@ -24,6 +24,8 @@ Read the [sanitized session report](docs/SESSION_REPORT.md) for the setup, plann
 | --- | --- |
 | `models/terra`, `models/luna`, `models/sol` | Original executable source, static assets, and submitted tests |
 | `probes/http_probe.py` | Separately authored HTTP reproduction checks |
+| `probes/edge_cases.py`, `probes/crash_recovery.py` | Supplemental queue ordering, attempt accounting, and process-restart probes |
+| `TASK_PROMPT.md`, `docs/EDGE_CASES.md` | English translation of the recovered Korean task and separately documented edge-case findings |
 | `probes/reproduce.py` | Runs each submitted suite and the independent probes in separate processes |
 | `results/` | Reproduction logs plus sanitized original-session data and action CSV |
 | `docs/SESSION_REPORT.md` | Original setup, actions, fixes and reported outcomes |
@@ -48,8 +50,8 @@ To inspect a dashboard, change into one model directory, run `python app.py`, an
 
 ## Reading the evidence
 
-Submitted tests are model-authored and may share assumptions or mistakes with their implementation. Re-running them verifies that those tests executed; it does not make their coverage independent. The independent checks cover a small common HTTP surface and two strict validation policies. Differences in unspecified policies are observations, not proof of a benchmark violation. The later session extracts recover a task summary and planned 100-point rubric, but not the exact prompt or awarded scores. They do not establish that the two strict validation policies were requirements.
+Submitted tests are model-authored and may share assumptions or mistakes with their implementation. Re-running them verifies that those tests executed; it does not make their coverage independent. The independent checks cover a small common HTTP surface and two strict validation policies. Differences in unspecified policies are observations, not proof of a benchmark violation. The contributor conversation supplies the common task text, translated in `TASK_PROMPT.md`, but the agent-input transcripts hide the exact submitted text. No awarded scores are established by these records. They do not establish that the two strict validation policies were requirements.
 
-See `docs/RESULTS.md` for the observed counts and interpretation. No aggregate ranking is assigned. Runtime data, databases, bytecode, private conversation exports, credentials and temporary files are excluded.
+See `docs/RESULTS.md` for the original five-check observations and `docs/EDGE_CASES.md` for supplemental FIFO, attempt-accounting and restart findings. The latter have their own evidence and execution-environment caveats. No aggregate ranking is assigned. Runtime data, databases, bytecode, private conversation exports, credentials and temporary files are excluded.
 
 No license is inferred from the archive; no additional rights grant is asserted by this publication.
