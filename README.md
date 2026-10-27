@@ -1,5 +1,11 @@
 # GPT coding-agent artifact benchmark
 
+## Before you begin
+
+This repository and its benchmark task, implementations, tests, documentation, and reproduction checks were prepared with GPT assistance. GPT also helped design and carry out the verification procedure and interpret its outputs. The original coding runs took place in **Orbit**, a separate IDE built by the repository publisher; the later publication and reproduction work is documented separately.
+
+In this repository, **independent probes** means checks authored separately from the submitted implementations' own tests. It does not mean an independent human review, an external audit, or a GPT-free evaluation. Findings are limited to the published artifacts and recorded runs.
+
 An exploratory comparison of three supplied local job-queue implementations, labeled **Terra 6.1**, **Luna 6**, and **Sol 6.1** by the contributor. These labels identify submissions; the archive does not independently establish exact backend model versions. This is a single artifact set, not a statistically reliable model leaderboard.
 
 ## Experiment record and graphics
