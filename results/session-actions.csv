@@ -1,0 +1,55 @@
+model,action_index,tool_family,sanitized_operation,visible_outcome_and_limits
+Terra 6.1,1,shell,Inspect working directory,Exit 0; command truncated
+Terra 6.1,2,shell,Create directory,Exit 0; target removed
+Terra 6.1,3,shell,Write Python block beginning with import json,Exit 0; body truncated
+Terra 6.1,4,shell,Write HTML block,Exit 0; body truncated
+Terra 6.1,5,shell,Create/run test-related Python block,Visible cancellation and stale-worker tests ok; output truncated
+Terra 6.1,6,shell,Read/modify content,"Exit 0; form.elements correction described in narration, full patch absent"
+Terra 6.1,7,shell,Run Python subprocess HTTP smoke check,"Dashboard HTTP 200, 1577 bytes; stats HTTP 200, zero jobs; output truncated"
+Luna 6,1,shell,Inspect location and search files,rg unavailable; local path removed
+Luna 6,2,shell,Fallback directory inspection,Exit 0
+Luna 6,3,patch,Write app.py,Patch completed; body truncated
+Luna 6,4,patch,Update app.py,Patch completed; body truncated
+Luna 6,5,patch,Write static assets,Patch completed; body truncated
+Luna 6,6,patch,Write README-related block,Patch completed; body truncated
+Luna 6,7,shell,"Run submitted suite, first pass",Failure marker; partial tests ok; full result absent
+Luna 6,8,patch,Correct implementation/test behavior,Completed; narration identifies double attempt increment and early completion assertion
+Luna 6,9,shell,Run submitted suite again,Success marker; narrator reports 9 passing at this stage
+Luna 6,10,shell,Subprocess startup smoke check,RuntimeError: server did not start within 8 seconds
+Luna 6,11,shell,PowerShell HTTP request,Object-reference error; cause not established
+Luna 6,12,shell,Launch app.py,Exit 1; diagnostics incomplete
+Luna 6,13,shell,Python HTTP request,HTTP 200; 2373 bytes; exit 0
+Luna 6,14,shell,Launch unbuffered app.py,Startup banner; exit 1; diagnostics incomplete
+Luna 6,15,shell,Inspect files,Exit success; local directory listing excluded
+Luna 6,16,patch,Update app.py after review,Completed; narrator describes queued cancellation and FIFO tie handling
+Luna 6,17,patch,Update tests,Completed; full patch unavailable
+Luna 6,18,shell,Run submitted suite,Success marker; queued-cancel test visible
+Luna 6,19,shell,Inspect files again,Success marker; absolute paths removed
+Luna 6,20,patch,Update app.py,Completed; exact patch unavailable
+Luna 6,21,shell,Run final submitted suite,"Success marker; final narrator claim 10 passed, 0 failed"
+Sol 6.1,1,shell,Inspect location and search files,rg unavailable; local path removed
+Sol 6.1,2,shell,Fallback directory/runtime inspection,Python interpreter detected; exit 0
+Sol 6.1,3,patch,Write app.py-related files,Completed; full patch unavailable
+Sol 6.1,4,patch,Write ignore rules and related files,Completed; full patch unavailable
+Sol 6.1,5,patch,Write queue_server.py-related files,Completed; full patch unavailable
+Sol 6.1,6,shell,"Run submitted suite, first pass","Failure marker; narrator reports 8/10, two SQLite cleanup errors"
+Sol 6.1,7,patch,Update README and related files,Completed; narrator reports explicit SQLite connection closure; full patch unavailable
+Sol 6.1,8,shell,Run submitted suite again,Success marker; full output truncated
+Sol 6.1,9,browser,Try in-app browser,Browser unavailable despite success wrapper
+Sol 6.1,10,browser,Enumerate browser availability,Chrome available; extension/browser identifiers removed
+Sol 6.1,11,browser,Open Chrome dashboard,API response present; state truncated
+Sol 6.1,12,browser,Enter synthetic script-tag title and submit,Interaction trace visible; state truncated
+Sol 6.1,13,browser,Inspect first-attempt failure,Accessibility-state request visible; output truncated
+Sol 6.1,14,browser,Click retry and inspect state,Node is detached from document
+Sol 6.1,15,patch,Update dashboard rendering,Completed; narrator attributes detached nodes to polling replacement
+Sol 6.1,16,browser,Reload patched dashboard,State response present; output truncated
+Sol 6.1,17,browser,Click retry and inspect again,Interaction trace visible; narrator reports completion
+Sol 6.1,18,browser,Set viewport width to 390 pixels,Viewport action visible; state truncated
+Sol 6.1,19,patch,Adjust static styling,Completed; full patch unavailable
+Sol 6.1,20,patch,Update queue_server.py-related content,Completed; full patch unavailable
+Sol 6.1,21,shell,Run final submitted suite,"Success marker; narrator reports 10 passed, 0 failed"
+Sol 6.1,22,shell,Inspect stylesheet,"CSS output visible, truncated"
+Sol 6.1,23,shell,Launch app.py,Startup banner; exit 1; cause not established
+Sol 6.1,24,shell,Run Python one-line check,Exit 0; full command unavailable
+Sol 6.1,25,browser,Reload and inspect responsive dashboard,State response present; output truncated
+Sol 6.1,26,shell,Launch app.py again,Startup banner; exit -1 despite success marker; clean shutdown unproven

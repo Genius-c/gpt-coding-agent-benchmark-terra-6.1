@@ -2,6 +2,16 @@
 
 An exploratory comparison of three supplied local job-queue implementations, labeled **Terra 6.1**, **Luna 6**, and **Sol 6.1** by the contributor. These labels identify submissions; the archive does not independently establish exact backend model versions. This is a single artifact set, not a statistically reliable model leaderboard.
 
+## Experiment record and graphics
+
+The supplied session extracts now document all three runs in **Orbit, the contributor-built IDE**, with Medium reasoning reported for each. The UI reports Terra **1m 36s / 7 actions**, Luna **4m 48s / 21 actions**, and Sol **6m 8s / 26 actions**. Different tool failures, self-corrections and browser checks are included in those durations; they do not establish a general speed ranking.
+
+![Recorded session duration and action counts](assets/session-evidence.png)
+
+![Submitted-suite reproduction and independent checks](assets/results-overview.png)
+
+Read the [sanitized session report](docs/SESSION_REPORT.md) for the setup, planned rubric, model-by-model work, failed attempts, fixes, evidence boundaries and redaction choices. All **54 deduplicated actions** are summarized in [English CSV](results/session-actions.csv). The raw conversation and identifying IDE links are not published.
+
 ## What is published
 
 | Path | Contents |
@@ -9,7 +19,9 @@ An exploratory comparison of three supplied local job-queue implementations, lab
 | `models/terra`, `models/luna`, `models/sol` | Original executable source, static assets, and submitted tests |
 | `probes/http_probe.py` | Separately authored HTTP reproduction checks |
 | `probes/reproduce.py` | Runs each submitted suite and the independent probes in separate processes |
-| `results/` | Observed reproduction results and logs |
+| `results/` | Reproduction logs plus sanitized original-session data and action CSV |
+| `docs/SESSION_REPORT.md` | Original setup, actions, fixes and reported outcomes |
+| `assets/`, `tools/build_figures.py` | Result graphics and reproducible chart source |
 | `provenance.json` | Archive digest and byte-preservation manifest |
 | `docs/METHODOLOGY.md` | Evidence boundaries and reproduction procedure |
 | `docs/LIMITATIONS.md` | Korean locale, Windows, encoding and generalizability limitations |
@@ -30,7 +42,7 @@ To inspect a dashboard, change into one model directory, run `python app.py`, an
 
 ## Reading the evidence
 
-Submitted tests are model-authored and may share assumptions or mistakes with their implementation. Re-running them verifies that those tests executed; it does not make their coverage independent. The independent checks cover a small common HTTP surface and two strict validation policies. Differences in unspecified policies are observations, not proof of a benchmark violation. There is no recovered original prompt or authoritative scoring rubric in the attached ZIP.
+Submitted tests are model-authored and may share assumptions or mistakes with their implementation. Re-running them verifies that those tests executed; it does not make their coverage independent. The independent checks cover a small common HTTP surface and two strict validation policies. Differences in unspecified policies are observations, not proof of a benchmark violation. The later session extracts recover a task summary and planned 100-point rubric, but not the exact prompt or awarded scores. They do not establish that the two strict validation policies were requirements.
 
 See `docs/RESULTS.md` for the observed counts and interpretation. No aggregate ranking is assigned. Runtime data, databases, bytecode, private conversation exports, credentials and temporary files are excluded.
 

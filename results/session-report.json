@@ -1,0 +1,92 @@
+{
+  "evidence_class": "Contributor-supplied original session summaries; not independently instrumented generation telemetry",
+  "host_application": "Orbit, an IDE built by the contributor",
+  "setup": {
+    "intended_same_prompt": true,
+    "prompt_text_visible": false,
+    "separate_folders_reported": true,
+    "one_recorded_turn_per_extract": true,
+    "no_extra_user_hints_recommended": true
+  },
+  "models": [
+    {
+      "key": "terra",
+      "label": "Terra 6.1",
+      "reported_model": "gpt-6.1-terra",
+      "reasoning": "medium",
+      "duration_seconds": 96,
+      "action_count": 7,
+      "final_submitted_tests_claimed": 9,
+      "browser_check": "Explicitly not visually checked",
+      "source": "proposal_and_terra_extract"
+    },
+    {
+      "key": "luna",
+      "label": "Luna 6",
+      "reported_model": "gpt-6-luna",
+      "reasoning": "medium",
+      "duration_seconds": 288,
+      "action_count": 21,
+      "final_submitted_tests_claimed": 10,
+      "browser_check": "No browser actions visible",
+      "source": "luna_extract"
+    },
+    {
+      "key": "sol",
+      "label": "Sol 6.1",
+      "reported_model": "gpt-6.1-sol",
+      "reasoning": "medium",
+      "duration_seconds": 368,
+      "action_count": 26,
+      "final_submitted_tests_claimed": 10,
+      "browser_check": "Chrome and 390 px viewport exercised; outputs truncated",
+      "source": "sol_extract"
+    }
+  ],
+  "planned_rubric": [
+    {
+      "area": "Functionality and API correctness",
+      "maximum_points": 25,
+      "awarded_points": null
+    },
+    {
+      "area": "Concurrency and race handling",
+      "maximum_points": 25,
+      "awarded_points": null
+    },
+    {
+      "area": "Persistence and restart recovery",
+      "maximum_points": 15,
+      "awarded_points": null
+    },
+    {
+      "area": "Test effectiveness and pass rate",
+      "maximum_points": 15,
+      "awarded_points": null
+    },
+    {
+      "area": "UI completeness and usability",
+      "maximum_points": 10,
+      "awarded_points": null
+    },
+    {
+      "area": "Structure and maintainability",
+      "maximum_points": 10,
+      "awarded_points": null
+    }
+  ],
+  "scope_notes": [
+    "Durations include tool use and different verification scopes.",
+    "Expanded and collapsed action views are deduplicated.",
+    "No cost, quota or task-token comparison is supported.",
+    "Exact original prompt and full command bodies are unavailable."
+  ],
+  "redacted_categories": [
+    "local paths and usernames",
+    "IDE session and browser extension identifiers",
+    "account quota and cumulative usage",
+    "absolute wall-clock times",
+    "unrelated personal history and projects",
+    "machine and device identifiers"
+  ]
+}

@@ -14,4 +14,14 @@ Submitted suites were executed as supplied and all exited successfully. Their di
 
 The machine-readable observations in `results/reproduction.json` and six log files provide the recorded evidence. Log timings reflect this one run and are not model generation latency. The initial restricted attempt encountered environment access failures; it was replaced by a completed run with loopback and temporary-file access. No runtime source fixes were made to the model submissions.
 
-No historical scores from the earlier conversation are asserted because its analysis was unavailable in the recovered reference. There is no aggregate score, significance claim or general winner.
+## Original generation sessions, reported separately
+
+The later supplied extracts report Terra 96 seconds / 7 actions, Luna 288 seconds / 21 actions, and Sol 368 seconds / 26 actions, each at Medium reasoning in the contributor-built Orbit IDE. Final agent claims were 9, 10 and 10 tests passing respectively. These are reported session summaries; the table above is the later measured reproduction of the ZIP artifacts.
+
+Luna corrected attempt accounting, a premature test assertion, queued cancellation and FIFO tie ordering. Sol corrected Windows SQLite cleanup and polling-related detached UI nodes, and used Chrome with a 390-pixel viewport. Terra corrected form field access and explicitly did not visually inspect the UI. Failed startup checks and incomplete diagnostics are retained in the sanitized action ledger rather than hidden.
+
+![Reproduction results](../assets/results-overview.png)
+
+![Reported original sessions](../assets/session-evidence.png)
+
+See [SESSION_REPORT.md](SESSION_REPORT.md) and `results/session-report.json`. There are no awarded weighted scores in the supplied text. No aggregate score, significance claim or general winner is assigned.
