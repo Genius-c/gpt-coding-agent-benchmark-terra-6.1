@@ -1,0 +1,14 @@
+test_cancel (test_app.QueueTests.test_cancel) ... ok
+test_cancel_retry_old_worker (test_app.QueueTests.test_cancel_retry_old_worker) ... ok
+test_completion (test_app.QueueTests.test_completion) ... ok
+test_concurrency_limit (test_app.QueueTests.test_concurrency_limit) ... ok
+test_concurrent_retry (test_app.QueueTests.test_concurrent_retry) ... ok
+test_failure_retry (test_app.QueueTests.test_failure_retry) ... ok
+test_invalid (test_app.QueueTests.test_invalid) ... ok
+test_persistence_history (test_app.QueueTests.test_persistence_history) ... ok
+test_restart (test_app.QueueTests.test_restart) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 11.504s
+
+OK

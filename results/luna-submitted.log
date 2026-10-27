@@ -1,0 +1,15 @@
+test_cancel_queued_job (test_app.QueueHTTPCase.test_cancel_queued_job) ... ok
+test_cancel_running_job (test_app.QueueHTTPCase.test_cancel_running_job) ... ok
+test_cancel_then_retry_ignores_old_worker_result (test_app.QueueHTTPCase.test_cancel_then_retry_ignores_old_worker_result) ... ok
+test_concurrent_registration_never_exceeds_two_running (test_app.QueueHTTPCase.test_concurrent_registration_never_exceeds_two_running) ... ok
+test_first_attempt_fails_then_retry_succeeds (test_app.QueueHTTPCase.test_first_attempt_fails_then_retry_succeeds) ... ok
+test_invalid_input_and_http_codes (test_app.QueueHTTPCase.test_invalid_input_and_http_codes) ... ok
+test_normal_job_completes (test_app.QueueHTTPCase.test_normal_job_completes) ... ok
+test_persistence_and_atomic_event_history (test_app.QueueHTTPCase.test_persistence_and_atomic_event_history) ... ok
+test_restart_recovers_running_jobs (test_app.QueueHTTPCase.test_restart_recovers_running_jobs) ... ok
+test_simultaneous_retry_requests_only_enqueue_once (test_app.QueueHTTPCase.test_simultaneous_retry_requests_only_enqueue_once) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 11.646s
+
+OK

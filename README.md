@@ -35,4 +35,3 @@ Submitted tests are model-authored and may share assumptions or mistakes with th
 See `docs/RESULTS.md` for the observed counts and interpretation. No aggregate ranking is assigned. Runtime data, databases, bytecode, private conversation exports, credentials and temporary files are excluded.
 
 No license is inferred from the archive; no additional rights grant is asserted by this publication.
-

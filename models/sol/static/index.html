@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>작업 큐 · Queue Desk</title><link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script></head>
+<body><main>
+<header><div><p class="eyebrow">LOCAL WORKSPACE / QUEUE DESK</p><h1>작업의 흐름을 한눈에.</h1><p class="subtitle">동시에 두 개씩 처리하는 로컬 모의 작업 큐</p></div><div id="connection" class="connection" role="status">연결 중</div></header>
+<section id="stats" class="stats" aria-label="상태별 통계"></section>
+<div id="error" role="alert" hidden></div>
+<div class="workspace"><section class="panel composer"><div class="section-title"><span class="number">01</span><h2>새 작업</h2></div>
+<form id="create-form"><label for="title">작업 제목</label><input id="title" name="title" maxlength="200" required placeholder="어떤 작업을 처리할까?">
+<label for="duration">실행 시간 <span class="muted">밀리초</span></label><input id="duration" name="duration" type="number" min="100" max="5000" step="1" value="1500" required><p class="hint">100~5,000ms · 실제 명령은 실행하지 않아.</p>
+<label class="checkbox"><input id="fail" type="checkbox"><span>첫 번째 시도에서 실패시키기<small>재시도하면 정상적으로 완료돼.</small></span></label>
+<button type="submit" id="submit">작업 추가 <span aria-hidden="true">＋</span></button><p id="form-status" class="hint" role="status"></p></form></section>
+<section class="panel jobs-panel"><div class="list-header"><div class="section-title"><span class="number">02</span><h2>작업 목록</h2></div><label class="filter-label" for="filter">상태 <select id="filter"><option value="">전체</option><option value="queued">대기</option><option value="running">실행 중</option><option value="completed">완료</option><option value="failed">실패</option><option value="cancelled">취소</option></select></label></div>
+<div class="list-meta"><span id="count">작업 불러오는 중</span><span>1초마다 자동 갱신</span></div><div id="jobs" aria-live="polite"></div></section></div>
+<footer><span>SQLite에 자동 저장</span><span id="updated">—</span></footer>
+</main></body></html>

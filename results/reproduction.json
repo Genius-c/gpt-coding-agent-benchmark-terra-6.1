@@ -1,0 +1,130 @@
+{
+  "timestamp_utc": "2026-10-27T01:52:56.138569+00:00",
+  "environment": {
+    "os": "Windows",
+    "release": "11",
+    "python": "3.13.9",
+    "sqlite": "3.50.4",
+    "preferred_encoding": "cp949",
+    "locale": [
+      "Korean_Korea",
+      "949"
+    ],
+    "child_python_utf8": true
+  },
+  "submitted_suites": [
+    {
+      "model": "terra",
+      "exit_code": 0,
+      "log": "results/terra-submitted.log"
+    },
+    {
+      "model": "luna",
+      "exit_code": 0,
+      "log": "results/luna-submitted.log"
+    },
+    {
+      "model": "sol",
+      "exit_code": 0,
+      "log": "results/sol-submitted.log"
+    }
+  ],
+  "independent_probes": [
+    {
+      "model": "terra",
+      "exit_code": 0,
+      "log": "results/terra-independent.log",
+      "observations": [
+        {
+          "name": "failure_retry_unicode",
+          "passed": true,
+          "detail": "UTF-8 title round trip, first failure, retry, completion, terminal conflict"
+        },
+        {
+          "name": "reject_boolean_duration",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "reject_blank_status_filter",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "reject_unknown_creation_field",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "running_cancel_stays_cancelled",
+          "passed": true,
+          "detail": null
+        }
+      ]
+    },
+    {
+      "model": "luna",
+      "exit_code": 0,
+      "log": "results/luna-independent.log",
+      "observations": [
+        {
+          "name": "failure_retry_unicode",
+          "passed": true,
+          "detail": "UTF-8 title round trip, first failure, retry, completion, terminal conflict"
+        },
+        {
+          "name": "reject_boolean_duration",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "reject_blank_status_filter",
+          "passed": false,
+          "detail": "AssertionError: expected 400, received 200"
+        },
+        {
+          "name": "reject_unknown_creation_field",
+          "passed": false,
+          "detail": "AssertionError: expected 400, received 201"
+        },
+        {
+          "name": "running_cancel_stays_cancelled",
+          "passed": true,
+          "detail": null
+        }
+      ]
+    },
+    {
+      "model": "sol",
+      "exit_code": 0,
+      "log": "results/sol-independent.log",
+      "observations": [
+        {
+          "name": "failure_retry_unicode",
+          "passed": true,
+          "detail": "UTF-8 title round trip, first failure, retry, completion, terminal conflict"
+        },
+        {
+          "name": "reject_boolean_duration",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "reject_blank_status_filter",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "reject_unknown_creation_field",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "running_cancel_stays_cancelled",
+          "passed": true,
+          "detail": null
+        }
+      ]
+    }
+  ]
+}

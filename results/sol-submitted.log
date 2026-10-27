@@ -1,0 +1,15 @@
+test_cancel_retry_stale_worker_cannot_overwrite (test_queue.QueueTests.test_cancel_retry_stale_worker_cannot_overwrite) ... ok
+test_concurrent_submission_limit_and_fifo (test_queue.QueueTests.test_concurrent_submission_limit_and_fifo) ... ok
+test_create_complete_and_static_dashboard (test_queue.QueueTests.test_create_complete_and_static_dashboard) ... ok
+test_first_failure_retry_success (test_queue.QueueTests.test_first_failure_retry_success) ... ok
+test_persistence_and_transactional_history (test_queue.QueueTests.test_persistence_and_transactional_history) ... ok
+test_queued_cancel_retry_and_transaction_rollback (test_queue.QueueTests.test_queued_cancel_retry_and_transaction_rollback) ... ok
+test_restart_recovers_running_and_queued (test_queue.QueueTests.test_restart_recovers_running_and_queued) ... ok
+test_running_cancel_and_duplicate_cancel (test_queue.QueueTests.test_running_cancel_and_duplicate_cancel) ... ok
+test_simultaneous_retry_only_once (test_queue.QueueTests.test_simultaneous_retry_only_once) ... ok
+test_validation_and_http_codes (test_queue.QueueTests.test_validation_and_http_codes) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 8.148s
+
+OK

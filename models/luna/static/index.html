@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>작업 큐 대시보드</title><link rel="stylesheet" href="/static/style.css">
+  <script defer src="/static/app.js"></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="top"><div><p class="eyebrow">LOCAL SIMULATED WORKER</p><h1>작업 큐</h1><p class="sub">등록된 작업의 진행 상태를 실시간으로 확인해.</p></div><span class="live"><i></i> 자동 갱신 중</span></header>
+    <section id="notice" class="notice" role="status" aria-live="polite">서버에 연결하는 중…</section>
+    <section class="stats" id="stats" aria-label="작업 통계"></section>
+    <section class="panel create-panel"><div class="panel-heading"><div><h2>새 작업</h2><p>작업은 실제 명령을 실행하지 않고 입력한 시간만큼 시뮬레이션해.</p></div></div>
+      <form id="create-form"><label class="field title-field">제목<input name="title" maxlength="200" required placeholder="예: 데이터 처리 시뮬레이션"></label>
+        <label class="field">실행 시간 (ms)<input name="duration_ms" type="number" min="100" max="5000" step="1" value="1000" required></label>
+        <label class="check"><input name="fail_first_attempt" type="checkbox"><span>첫 시도 실패 후 재시도에서 성공</span></label>
+        <button class="primary" type="submit">작업 등록</button></form>
+    </section>
+    <section class="panel list-panel"><div class="panel-heading list-heading"><div><h2>작업 목록</h2><p id="list-caption">모든 작업</p></div><label class="filter">상태 필터<select id="filter"><option value="">전체 상태</option><option value="queued">대기</option><option value="running">실행 중</option><option value="completed">완료</option><option value="failed">실패</option><option value="cancelled">취소</option></select></label></div>
+      <div class="table-wrap"><table><thead><tr><th>작업</th><th>상태</th><th>시도</th><th>실행 시간</th><th>생성 시각</th><th>작업</th></tr></thead><tbody id="jobs"><tr><td colspan="6" class="empty">불러오는 중…</td></tr></tbody></table></div>
+    </section>
+    <footer>SQLite 영속 저장 · 동시 실행 최대 2개 · 상태는 1초마다 갱신</footer>
+  </main>
+</body></html>
